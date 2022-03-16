@@ -45,7 +45,7 @@ public class JfrmNotas extends javax.swing.JFrame {
         
             for(var i: clsD_Notas.MostrarNotas()){
                 //Estudiantes bucleEstudiante = new Estudiantes();
-                fila[0] = String.valueOf(i.getId());
+                fila[0] = String.valueOf(i.getIdnotas());
                 fila[1] = i.getNombres();
                 fila[2] = i.getApellidos();
                 fila[3] = i.getNombreMateria();
