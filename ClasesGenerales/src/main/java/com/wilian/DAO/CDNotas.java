@@ -57,7 +57,7 @@ public class CDNotas {
         try {
             listado = new ArrayList<ViewModelNotas>();
             
-                CallableStatement variableConsulta = conexion.prepareCall("{call sp_S_MostrarNotas()}");
+                CallableStatement variableConsulta = conexion.prepareCall("{call SP_S_NOTAS()}");
                //CallableStatement variableConsulta = conexion.prepareCall("Select * from Tbl_Estudiantes");
             
             ResultSet resultadoConsulta = variableConsulta.executeQuery();
