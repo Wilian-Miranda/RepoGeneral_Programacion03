@@ -30,9 +30,10 @@ create procedure SP_D_ESTUDIANTES(
 	Pid int
 )
 begin
-	delete from estudiantes
+	delete from estudiantes a
 		where a.id = Pid;
 end
 $$
 
+call SP_D_ESTUDIANTES(29);
 call sp_Acceso("wilian","12345");
