@@ -10,7 +10,17 @@ package com.wilian.Entidades;
  */
 public class DbMaterias {
 
+    private int idMateria;
     private String nombreMateria;
+    
+    
+    public int getIdMateria() {
+        return idMateria;
+    }
+
+    public void setIdMateria(int idMateria) {
+        this.idMateria = idMateria;
+    }
     
     public String getNombreMateria() {
         return nombreMateria;

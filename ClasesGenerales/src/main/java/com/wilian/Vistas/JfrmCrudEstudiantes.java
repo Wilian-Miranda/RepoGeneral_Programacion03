@@ -6,6 +6,7 @@ package com.wilian.Vistas;
 
 import com.wilian.DAO.CDEstudiantes;
 import com.wilian.Entidades.Estudiantes;
+import java.util.Date;
 
 /**
  *
@@ -38,6 +39,7 @@ public class JfrmCrudEstudiantes extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         txtApellidos = new javax.swing.JTextField();
         btnGuardar = new javax.swing.JButton();
+        jdcFecha = new datechooser.beans.DateChooserCombo();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -80,9 +82,10 @@ public class JfrmCrudEstudiantes extends javax.swing.JFrame {
                             .addComponent(jLabel3)
                             .addComponent(txtNombres)
                             .addComponent(jLabel4)
-                            .addComponent(txtApellidos, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)))
+                            .addComponent(txtApellidos, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
+                            .addComponent(jdcFecha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
+                        .addGap(144, 144, 144)
                         .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
@@ -103,9 +106,11 @@ public class JfrmCrudEstudiantes extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addGap(37, 37, 37)
+                .addComponent(jdcFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addComponent(btnGuardar)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         pack();
@@ -118,7 +123,7 @@ public class JfrmCrudEstudiantes extends javax.swing.JFrame {
                 CDEstudiantes clsD_Estudiantes = new CDEstudiantes();
                 es.setNombres(txtNombres.getText());
                 es.setApellidos(txtApellidos.getText());
-
+                es.setFecha((Date)jdcFecha.getSelectedDate().getTime());
                 clsD_Estudiantes.AgregarEstudiante(es);
                 
                 frmEstudiantes.CargarEstudiantesTabla();
@@ -186,6 +191,7 @@ public class JfrmCrudEstudiantes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private datechooser.beans.DateChooserCombo jdcFecha;
     public javax.swing.JTextField txtApellidos;
     public javax.swing.JTextField txtIdEstudiante;
     public javax.swing.JTextField txtNombres;

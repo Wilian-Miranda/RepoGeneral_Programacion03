@@ -62,9 +62,10 @@ public class CDEstudiantes implements IEstudiantes{
         Connection conexion = variableConexion.ObtenerConexion();
         
         try {
-            CallableStatement variableConsulta = conexion.prepareCall("{call sp_I_Estudiantes(?, ?)}");
-            variableConsulta.setString("pNombre", es.getNombres());
-            variableConsulta.setString("pApellido", es.getApellidos());
+            CallableStatement variableConsulta = conexion.prepareCall("{call sp_I_Estudiantes(?, ?,?)}");
+            variableConsulta.setString(1, es.getNombres());
+            variableConsulta.setString(2, es.getApellidos());
+            variableConsulta.setDate(3, new java.sql.Date(es.getFecha().getTime()));
             /*
             CallableStatement variableConsulta = conexion.prepareCall("insert into Tbl_Estudiantes(nombres, apellidos) values ("
             +"'"+es.getNombres()+"'" +","

@@ -6,6 +6,7 @@ package com.wilian.DAO;
 
 import ViewModels.ViewModelNotas;
 import com.wilian.DataBase.ConexionMYSQL;
+import com.wilian.Entidades.DbNotas;
 //import com.wilian.Entidades.DbNotas;
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -21,41 +22,12 @@ import javax.swing.JOptionPane;
 public class CDNotas {
         ConexionMYSQL variableConexion = new ConexionMYSQL();
     
-    //mostrar datos
-    /*
-    public ArrayList<DbNotas> MostrarNotas(){
-        ArrayList<DbNotas> listado = null;
-        Connection conexion = variableConexion.ObtenerConexion();
-        
-        try {
-            listado = new ArrayList<DbNotas>();
-            
-                CallableStatement variableConsulta = conexion.prepareCall("{call sp_S_MostrarNotas()}");
-               //CallableStatement variableConsulta = conexion.prepareCall("Select * from Tbl_Estudiantes");
-            
-            ResultSet resultadoConsulta = variableConsulta.executeQuery();
-            
-            while(resultadoConsulta.next()){
-                DbNotas notas = new DbNotas();
-                notas.setId(resultadoConsulta.getInt("idnotas"));
-                notas.setNombres(resultadoConsulta.getString("nombres"));
-                notas.setApellidos(resultadoConsulta.getString("apellidos"));
-                notas.setNombreMateria(resultadoConsulta.getString("nombreMateria"));
-                notas.setNota(resultadoConsulta.getString("nota"));
-                listado.add(notas);
-            }
-        } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Error al mostrar notas:\n"+e.toString());
-        }
-        return listado;
-    }*/
-    
         public ArrayList<ViewModelNotas> MostrarNotas(){
         ArrayList<ViewModelNotas> listado = null;
         Connection conexion = variableConexion.ObtenerConexion();
         
         try {
-            listado = new ArrayList<ViewModelNotas>();
+            listado = new ArrayList<>();
             
                 CallableStatement variableConsulta = conexion.prepareCall("{call SP_S_NOTAS()}");
                //CallableStatement variableConsulta = conexion.prepareCall("Select * from Tbl_Estudiantes");
@@ -75,6 +47,31 @@ public class CDNotas {
                 JOptionPane.showMessageDialog(null, "Error al mostrar notas:\n" + e.toString());
         }
         return listado;
+    }
+        
+           public void AgregarNota(DbNotas es){
+        
+        Connection conexion = variableConexion.ObtenerConexion();
+        CallableStatement variableConsulta;
+        try {
+            variableConsulta = conexion.prepareCall("{call SP_I_NOTAS(?, ?,?)}");
+            variableConsulta.setDouble(1, es.getNota());
+            variableConsulta.setInt(2, es.getIdmateria());
+            variableConsulta.setInt(3, es.getIdEstudiante());
+
+            variableConsulta.execute();
+            
+            JOptionPane.showMessageDialog(null, "Inscripcion agregada exitosamente");
+            
+
+            variableConsulta.close();
+            conexion.close();
+
+        } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, "Error al insertar inscripcion:\n"+e.toString());
+        }
+        
+
     }
         
 }

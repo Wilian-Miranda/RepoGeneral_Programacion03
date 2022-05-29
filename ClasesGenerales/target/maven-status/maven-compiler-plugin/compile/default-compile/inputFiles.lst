@@ -1,4 +1,16 @@
-C:\Users\Willian\Desktop\Ciclo V\Programacion III\Proyectos de Practica\ClasesGenerales\src\main\java\com\wilian\DAO\CDEstudiantes.java
-C:\Users\Willian\Desktop\Ciclo V\Programacion III\Proyectos de Practica\ClasesGenerales\src\main\java\com\wilian\Entidades\Estudiantes.java
-C:\Users\Willian\Desktop\Ciclo V\Programacion III\Proyectos de Practica\ClasesGenerales\src\main\java\com\wilian\DataBase\ConexionMYSQL.java
-C:\Users\Willian\Desktop\Ciclo V\Programacion III\Proyectos de Practica\ClasesGenerales\src\main\java\com\wilian\Vistas\FrmEstudiantes.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\DAO\CDLogin.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\Entidades\Login.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\Entidades\Estudiantes.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\Entidades\DbNotas.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\DAO\CDNotas.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\Vistas\JfrmNotas.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\Vistas\FrmEstudiantes.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\Vistas\JfrmCrudEstudiantes.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\Vistas\JfrmRegistro.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\DataBase\ConexionMYSQL.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\services\ILogin.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\services\IEstudiantes.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\Vistas\JfrmLogin.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\Entidades\DbMaterias.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\ViewModels\ViewModelNotas.java
+C:\Users\Willian\Desktop\Ciclo V\Programacion III\RepoGeneral_Programacion03\ClasesGenerales\src\main\java\com\wilian\DAO\CDEstudiantes.java

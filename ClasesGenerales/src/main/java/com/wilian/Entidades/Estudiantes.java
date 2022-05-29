@@ -4,6 +4,8 @@
  */
 package com.wilian.Entidades;
 
+import java.util.Date;
+
 /**
  *
  * @author Willian
@@ -13,6 +15,15 @@ public class Estudiantes extends DbMaterias {
     private int id;
     private String nombres;
     private String apellidos;
+    private Date fecha;
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
 
     public String getNombres() {
         return nombres;
